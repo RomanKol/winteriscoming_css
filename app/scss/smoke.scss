@@ -1,0 +1,23 @@
+.smoke {
+	position: absolute;
+  transform-origin: 50%;
+	opacity: 0.5;
+
+  //High CPU Usage
+	//mix-blend-mode: overlay;
+
+  animation-name: rotate;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.reverse {
+	animation-direction: reverse;
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate3d(0, 0, 1, 360deg);
+	}
+}
