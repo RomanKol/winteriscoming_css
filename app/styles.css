@@ -1,0 +1,218 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Cinzel', serif;
+	font-size: 16px;
+	height: 100vh;
+	width: 100vw;
+	background-color: #000;
+}
+
+body {
+	overflow: hidden;
+}
+
+main#countdown {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 250;
+}
+
+#countdown section {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+#countdown strong {
+	min-width: 1.5rem;
+}
+
+::selection {
+	color: black;
+	background-color: white;
+}
+
+h1 {
+	font-weight: 400;
+}
+
+strong {
+	display: inline-block;
+	text-align: center;
+	font-weight: 700;
+}
+
+.hide {
+	display: none;
+}
+
+.nav {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1000;
+}
+
+.info-box {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	z-index: 1000;
+	background-color: #ccc;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	transition: all 500ms ease-in-out
+}
+
+.info-box.hidden {
+	opacity: 0;
+	visibility: hidden;
+}
+
+button.info-box-button {
+	position: absolute;
+	right: 0;
+	top: 0;
+	color: black;
+	z-index: 20;
+	outline: none;
+}
+
+button.info-box-button.open {
+	color: #fff;
+}
+
+.social {
+	margin-top: 1rem;
+	text-decoration: none;
+}
+
+.social a,
+.social a:hover,
+.social a:hover:focus {
+	text-decoration: none;
+}
+
+button {
+	border: none;
+	padding: 1rem;
+	z-index: 1000;
+	background-color: transparent;
+	color: white;
+}
+
+button.share {
+	border-radius: 50%;
+	padding: 1rem;
+	transition: all 125ms;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 12px 0 rgba(0, 0, 0, 0.12);
+}
+
+.social a~a {
+	margin-left: 12px;
+}
+
+button.share:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.2);
+	transform: scale(1.05);
+}
+
+button.share svg {
+	float: left;
+	height: 1rem;
+	width: auto;
+}
+
+button.share img.facebook {
+	background-color: #3b5998;
+}
+
+button.share img.twitter {
+	background-color: #55acee;
+}
+
+#background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	overflow: hidden;
+}
+
+.smoke {
+	position: absolute;
+	transform-origin: 50%;
+	opacity: 0.5;
+
+	/* High CPU Usage */
+	/* mix-blend-mode: overlay; */
+
+	animation-name: rotate;
+	animation-duration: 60s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.reverse {
+	animation-direction: reverse;
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate3d(0, 0, 1, 360deg);
+	}
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	body {
+		font-size: 24px;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	body {
+		font-size: 36px;
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+	body {
+		font-size: 40px;
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1900px) {
+	#countdown {
+		font-size: 6rem;
+	}
+
+	strong {
+		min-width: 7rem;
+	}
+}

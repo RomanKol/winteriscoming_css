@@ -1,9 +1,12 @@
 {
   "name": "winteriscoming_css",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Winter is coming app with css animations",
-  "main": "gulpfile.js",
   "scripts": {
+    "dev": "parcel app/index.html",
+    "build": "parcel build app/index.html",
+    "lint": "eslint app/scripts/**.js",
+    "lint:fix": "eslint app/scripts/**.js --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -14,19 +17,31 @@
     "countdown",
     "game of thrones"
   ],
-  "homepage": "http://www.kollatschny.net",
-  "author": "Roman Kollatschny <info@kollatschny.net> (www.kollatschny.net)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RomanKol/winteriscoming_css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RomanKol/winteriscoming_css/issues"
+  },
+  "homepage": "http://www.kollatschny.net/winteriscoming_css",
+  "author": "Roman Kollatschny <mail@kollatschny.net> (www.kollatschny.net)",
   "license": "MIT",
+  "dependencies": {
+    "parcel-bundler": "^1.11.0"
+  },
   "devDependencies": {
-    "browser-sync": "^2.12.3",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-cssnano": "^2.1.1",
-    "gulp-notify": "^2.2.0",
-    "gulp-plumber": "^1.1.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.2.0",
-    "gulp-uglify": "^1.5.3",
-    "gulp-uncss": "^1.0.5"
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es6": true
+    },
+    "extends": "airbnb"
   }
 }
